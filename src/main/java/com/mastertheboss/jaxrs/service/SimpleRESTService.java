@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Path("/tutorial")
 public class SimpleRESTService  {
-	public ItemCollection itemCollection = new ItemCollection();
+	public static ItemCollection itemCollection = new ItemCollection();
 
 	@GET
 	@Path("helloname/{name}")
@@ -25,10 +25,12 @@ public class SimpleRESTService  {
     @Produces(MediaType.APPLICATION_JSON)
     public Map<String, Item> getJSONItems() {
 	//	ItemCollection itemCollection = new ItemCollection();
+		System.out.println(itemCollection.getItemMap().toString());
 		itemCollection.setItemToMap(new Item.ItemBuilder().description("banana").price(5).buildItem());
 		itemCollection.setItemToMap(new Item.ItemBuilder().description("mango").price(3).buildItem());
 		itemCollection.setItemToMap(new Item.ItemBuilder().description("apple").price(1).buildItem());
 //
+		System.out.println(itemCollection.getItemMap().toString());
       return itemCollection.getItemMap();
     }
 
