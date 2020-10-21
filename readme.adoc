@@ -1,3 +1,0 @@
-== RESTEasy tutorial for WildFly
-
-Article: http://www.mastertheboss.com/jboss-frameworks/resteasy/resteasy-tutorial

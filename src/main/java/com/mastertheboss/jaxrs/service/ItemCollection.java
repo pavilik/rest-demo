@@ -1,13 +1,13 @@
 package com.mastertheboss.jaxrs.service;
-
 import com.mastertheboss.jaxrs.model.Item;
-
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class  ItemCollection {
    private Map<String,Item> itemMap = new HashMap<>();
+
+
+   public  ItemCollection (){}
 
    public Map<String, Item> getItemMap() {
       return itemMap;
